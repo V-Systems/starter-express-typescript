@@ -1,6 +1,5 @@
 import Express, {Application} from 'express';
-import errorMiddleware from './middleware/error.middleware';
-import path from 'path';
+import errorMiddleware from './middlewares/error.middleware';
 import indexRouter from "./routers/index";
 
 class App {
@@ -22,7 +21,6 @@ class App {
     private initExpress(): void {
         this.app.use(Express.json());
         this.app.use(Express.urlencoded({ extended: false }));
-        this.app.use(Express.static(path.join(__dirname, 'public')));
     }
 
     private routes(): void {
