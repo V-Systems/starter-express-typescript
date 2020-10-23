@@ -45,5 +45,5 @@ testem.log
 .DS_Store
 Thumbs.db
 
-access.log
-query.txt
+# Package-lock json file
+package-lock.json
